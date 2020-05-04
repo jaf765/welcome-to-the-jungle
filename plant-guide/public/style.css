@@ -1,0 +1,381 @@
+*{
+  margin: 0;
+  padding:0;
+}
+
+
+body {
+  cursor:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAaCAMAAABigZc2AAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAAFpJREFUeNp9jUEOwEAIAhn+/+imjbs1bC0XzQioSUAAYZs0mcVY051RbGXfFsyxibTVHXhuhXYlbuRGPbe7kz3g0wf679OuizDBdCaberLE4AsjGliD02eNugA+MQFAPqynHQAAAABJRU5ErkJggg==),auto;
+}
+
+.background {
+  background-image: url("plantbackfilter.jpg");
+  height: 100%;
+  margin-top: none;
+}
+
+.welcomeFormat{
+  text-align: left;
+  margin-left: 200px;
+}
+
+
+.playfair {
+  font-family: 'Playfair Display', serif;
+}
+
+.welcome{
+  color: white;
+  padding-top: 90px;
+  font-size: 40pt;
+}
+
+.jungle {
+font-size: 90pt;
+color: white;
+margin-top: -65px;
+font-weight: 900;
+}
+
+.guide {
+  color:white;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 30pt;
+  font-weight: 300;
+  margin-bottom: 10px;
+  padding-top: 70px;
+}
+
+.text {
+  color:white;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 18pt;
+  font-weight: lighter;
+  padding-bottom: 60px;
+
+}
+
+a.butt,.butt {
+	display: inline-block;
+	outline: none;
+	*zoom: 1;
+	text-align: center;
+	text-decoration: none;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	letter-spacing: 1px;
+	vertical-align: middle;
+	border: 1px solid;
+	transition: all 0.2s ease;
+	box-sizing: border-box;
+	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+  text-decoration: none;
+
+  border-radius: 3px;
+
+  font-size: 16pt;
+	padding: 0.5625em 1.5em;
+
+  color: white;
+	border-color: white;
+  margin-top: 60px;
+}
+
+.butt:hover {
+  background: white;
+  color: black;
+  border-color: white;
+  text-decoration: none;
+}
+
+.butt:focus {
+  color: white;
+  text-decoration: none;
+}
+
+.second {
+  width: 100%;
+   height: 150%;
+   /* background-color: #ede6e4; */
+   background-image: url("whiteplantback.jpg");
+   background-size: cover;
+}
+
+
+/* type animation */
+.ml9 {
+  position: relative;
+  font-weight: 900;
+  font-size: 115pt;
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  line-height: 1em;
+}
+
+/* second */
+
+.header {
+	text-align: center;
+	font-family: 'Playfair Display', serif;
+	font-size: 40pt;
+  padding-top: 50px;
+}
+
+h1.header {
+  margin-top: 0px;
+}
+
+.subline {
+	display: block;
+	font-size: 20px;
+	font-family: 'Work Sans', sans-serif;
+	padding-top: 10px;
+	font-weight: lighter;
+	text-align: center;
+  padding-bottom: 40px;
+}
+
+.prompt {
+	display: block;
+	font-size: 20px;
+	font-family: 'Work Sans', sans-serif;
+	padding-top: 50px;
+}
+
+.btn {
+	margin: 0 20px 0 20px;
+	font-family: 'Work Sans', sans-serif;
+
+}
+
+.btn:focus,
+.btn:active {
+  outline: 0 !.important;
+}
+
+.btn-strongly-agree {
+	color: #262626;
+	font-weight: bold;
+}
+
+
+.btn-strongly-agree.active,
+.btn-strongly-agree:active,
+.btn-strongly-agree:focus,
+.btn-strongly-agree:active:focus,
+.btn-strongly-agree.active:focus,
+.btn-strongly-agree:hover
+ {
+	background-color: #89d298;
+}
+
+.btn-agree {
+	color: #262626;
+}
+
+.btn-agree.active,
+.btn-agree:active,
+.btn-agree:focus,
+.btn-agree:active:focus,
+.btn-agree.active:focus,
+.btn-agree:hover {
+	background-color: rgba(137, 210, 152, 0.5);
+}
+
+.btn-disagree {
+	color: #262626;
+}
+
+.btn-disagree.active,
+.btn-disagree:active,
+.btn-disagree:focus,
+.btn-disagree:active:focus,
+.btn-disagree.active:focus,
+.btn-disagree:hover {
+	background-color: rgba(226, 129, 129, 0.5);
+}
+
+.btn-strongly-disagree {
+	color: #262626;
+	font-weight: bold;
+}
+
+.btn-strongly-disagree.active,
+.btn-strongly-disagree:active,
+/* .btn-strongly-disagree:focus,*/
+/* .btn-strongly-disagree:active:focus,
+.btn-strongly-disagree.active:focus, */
+.btn-strongly-disagree:hover {
+	background-color: red;
+}
+
+.btn-strongly-disagree:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+.bottom {
+	margin-bottom: 100px;
+}
+
+.hide {
+	display: none;
+}
+
+.list-group-item {
+	background-color: #EDE6E4;
+	border-color: none;
+}
+
+.list-group-item.prompt {
+	border-color: white;
+
+}
+
+.show {
+	display: block;
+}
+
+#submit-btn {
+	border-radius: 3%;
+	border-color: #262626;
+	border-width: 1.5pt;
+	color: white;
+	margin-top: 70px;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: lighter;
+	font-size: 18pt;
+	width: 200px;
+	padding: 10px;
+	background-color: #262626;
+}
+
+#submit-btn:hover {
+	background-color: white;
+	color: #262626;
+}
+
+#retake-btn {
+	border-radius: 3%;
+	border-color: #262626;
+	border-width: 1.5pt;
+	color: white;
+	margin-top: 70px;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: lighter;
+	font-size: 18pt;
+	width: 200px;
+	padding: 10px;
+	background-color: #262626;
+}
+
+#retake-btn:hover {
+	background-color: white;
+	color: #262626;
+}
+
+
+/* RESULTS */
+.results {
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+
+
+
+/* MEDIA QUERIES */
+
+/* this is for breaking down to iphone size */
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+    /*welcome page */
+    .welcomeFormat{
+      text-align: center;
+      margin-left: 0px;
+    }
+
+    .welcome{
+      color: white;
+      padding-top: 15px;
+      font-size: 30pt;
+    }
+
+    .jungle{
+      padding-top: 30px;
+      font-size: 80px;
+    }
+
+    .guide {
+      font-size: 30pt;
+      padding-top: 20px;
+    }
+
+    .text {
+      color:white;
+      font-family: 'Work Sans', sans-serif;
+      font-size: 18pt;
+      font-weight: lighter;
+      padding-bottom: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+    }
+
+    a.butt,.butt {
+    	display: inline-block;
+    	outline: none;
+    	*zoom: 1;
+    	text-align: center;
+    	text-decoration: none;
+    	font-family: 'Work Sans', sans-serif;
+    	font-weight: 300;
+    	letter-spacing: 1px;
+    	vertical-align: middle;
+    	border: 1px solid;
+    	transition: all 0.2s ease;
+    	box-sizing: border-box;
+    	text-shadow: 0 1px 0 rgba(0,0,0,0.01);
+      text-decoration: none;
+
+      border-radius: 3px;
+
+      font-size: 16pt;
+    	padding: 0.5625em 1.5em;
+
+      color: white;
+    	border-color: white;
+      margin-top: 0px;
+    }
+
+    /*quiz page*/
+    .second{
+      background-image: none;
+      border-color: white;
+    }
+
+    .subline {
+    	font-size: 18px;
+    	padding-top: 7px;
+      padding-bottom: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+}

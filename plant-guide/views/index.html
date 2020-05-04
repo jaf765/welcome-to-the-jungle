@@ -1,0 +1,148 @@
+
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <title></title>
+     <meta name="description" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="style.css">
+     <!-- animate css -->
+     <link rel="stylesheet" type="text/css" href="css/animate.css">
+     <!-- bootstrap -->
+
+     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;900&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<script>
+const TOKEN = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpcCI6WzQ4LDQ2LDQ4LDQ2LDQ4LDQ2LDQ4XSwiaXNzdWVyX2lkIjo0MzIwLCJvcmlnaW4iOiJodHRwczovL2NlemFyLmlvIiwiYXVkIjoiSm9rZW4iLCJleHAiOjE1ODY4OTUxNDMsImlhdCI6MTU4Njg4Nzk0MywiaXNzIjoiSm9rZW4iLCJqdGkiOiIybzJzNGJhb3Rhc3BiamdhM2MwMDAwazEiLCJuYmYiOjE1ODY4ODc5NDN9.KrNYSnYYlg2yBvARVv9YjxuOfhIWRSaTcC5RmB5eF6E'
+
+
+function fetchIntermediate() {
+      console.log("fetchIntermediate")
+                $.ajax({
+                    url:'/intermediateplants',
+                    type: 'GET',
+                    complete: function (response) {
+                        var text = JSON.strigify(response.scientific_name);
+                        console.log(text);
+                        // console.log(response.responseJSON);
+                        //$('#output-2').html(response.responseText);
+                        // $('#plantimage').src = response.whatever.whwatver.image.rc;
+                        $('#plantname').html(response.common_name);
+                        $('#scientificname').html(response.scientific_name);
+                        // $('#output-3').html(response.responseText);
+                        console.log("somethings working i guess");
+                    },
+                    error: function () {
+                        $('#plantimage').html('Bummer: there was an error with the intermediate image!');
+                        $('#plantname').html('Bummer: there was an error with the intermediate plant name!');
+                        $('#scientificname').html('Bummer: there was an error scientific name!');
+                    },
+                });
+                return false;
+            }
+
+
+      function fetchAdvanced() {
+                $.ajax({
+                    url:'/advancedplants',
+                    type: 'GET',
+                    complete: function (response) {
+                        console.log(response.responseJSON)
+                        //$('#output-2').html(response.responseText);
+                        $('#plantimage').src = response.whatever.whwatver.image.rc;
+                        $('#plantname').html(response.whatver.whatever.title);
+                        $('#scientificname').html(response.scientific_name);
+                    },
+                    error: function () {
+                      $('#plantimage').html('Bummer: there was an error with the advanced image!');
+                      $('#plantname').html('Bummer: there was an error with the plant name!');
+                      $('#scientificname').html('Bummer: there was an error scientific name!');
+                    },
+                });
+                return false;
+            }
+
+      function fetchBeginner() {
+              $.ajax({
+                  url:'/beginnerplants',
+                  type: 'GET',
+                  complete: function (response) {
+                      console.log(response.responseJSON)
+                      // $('#output-1').html(response.responseText);
+                      $('#plantimage').src = response.whatever.whwatver.image.rc;
+                      $('#plantname').html(response.whatver.whatever.title);
+                      $('#scientificname').html(response.scientific_name)
+                  },
+                  error: function () {
+                    $('#plantimage').html('Bummer: there was an error with the beginner image!');
+                    $('#plantname').html('Bummer: there was an error with the plant name!');
+                    $('#scientificname').html('Bummer: there was an error scientific name!');
+                  },
+              });
+              return false;
+          }
+</script>
+
+</head>
+
+<body>
+ <div class="background">
+  <div class="welcomeFormat">
+    <p class = "playfair welcome"> Welcome to the </p>
+    <h1 class = "playfair jungle ml9"> <span class="text-wrapper"><span class="letters">JUNGLE </span></span></h1>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <p class = "guide"> A Houseplant Matchmaker </p>
+    <p class = "text"> Studies have proven that house plants improve concentration <br />
+      and productivity (by up to 15%), reduce stress levels, and boost your mood. <br />
+      Find out your houseplant match made in heaven with the quiz!</p>
+
+    <a class="butt" type="button" href="#">TAKE THE QUIZ</a>
+  </div>
+</div>
+
+
+
+<div class="second">
+
+        <h1 class="header"> The Quiz </h1>
+        <h3 class="subline"> Humans are unique, and plants are no different. <br  /> Find out which plant is most compatible for you. </h3>
+
+
+        <div class="container text-center">
+          <ul id="quiz" class="list-group">
+          </ul>
+        </div>
+
+        <div class="container text-center hide results">
+          <img id="plantimage">
+          <div id="plantname"></div>
+          <div id="scientificname"></div>
+          <!-- create an element for each piece of data about plants -->
+        </div>
+
+        <div class="container text-center results hide">
+          <p id="results"></p>
+        </div>
+
+        <div class="container text-center bottom">
+          <button id="submit-btn" class="btn btn-primary btn-lg">SUBMIT</button>
+
+          <button id="retake-btn" class="hide btn btn-primary btn-lg">Retake Quiz</button>
+        </div>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+
+        </body>
+
+</html>
